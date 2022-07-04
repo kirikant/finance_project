@@ -1,0 +1,154 @@
+{
+	"info": {
+		"_postman_id": "61feecfc-4946-441e-afaf-b3daccdbd9ad",
+		"name": "classifier",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19288372"
+	},
+	"item": [
+		{
+			"name": "get currencies",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudDEiLCJyb2xlIjoiVVNFUiIsImVtYWlsIjoia2lyaWthbnRAeWFuZGV4LnJ1IiwiaWF0IjoxNjU2MzMyMTQ2LCJleHAiOjE2NTY5MzY5NDZ9.zJZSzFooChxzRchtTrfgonJyYBvTG8YQZ0tOptjQ3jE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8100/classifier/currency?page=0&size=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"classifier",
+						"currency"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add currency",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudEFkbWluIiwicm9sZSI6IkFETUlOIiwiZW1haWwiOiJraXJpa2FudEB5YW5kZXgucnUiLCJpYXQiOjE2NTYzMzI5MzYsImV4cCI6MTY1NjkzNzczNn0.Kv2Z8674Y4YndZF7ZutUJO9JaLuRWBTjz-Yl6TLmzOg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"carrency1\",\r\n  \"description\": \"currency1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8100/classifier/currency",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"classifier",
+						"currency"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add category",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudEFkbWluIiwicm9sZSI6IkFETUlOIiwiZW1haWwiOiJraXJpa2FudEB5YW5kZXgucnUiLCJpYXQiOjE2NTYzMzI5MzYsImV4cCI6MTY1NjkzNzczNn0.Kv2Z8674Y4YndZF7ZutUJO9JaLuRWBTjz-Yl6TLmzOg",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n \"title\":\"category2\"  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8100/classifier/operation/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"classifier",
+						"operation",
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get categories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudDEiLCJyb2xlIjoiVVNFUiIsImVtYWlsIjoia2lyaWthbnRAeWFuZGV4LnJ1IiwiaWF0IjoxNjU2MzMyMTQ2LCJleHAiOjE2NTY5MzY5NDZ9.zJZSzFooChxzRchtTrfgonJyYBvTG8YQZ0tOptjQ3jE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8100/classifier/operation/category?page=0&size=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8100",
+					"path": [
+						"classifier",
+						"operation",
+						"category"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,309 @@
+{
+	"info": {
+		"_postman_id": "0c146a57-55a3-4938-b44b-0d9bd6e99049",
+		"name": "accounts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19288372"
+	},
+	"item": [
+		{
+			"name": "add account",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudDEiLCJyb2xlIjoiVVNFUiIsImVtYWlsIjoia2lyaWthbnRAeWFuZGV4LnJ1IiwiaWF0IjoxNjU2MzMzNzAwLCJleHAiOjE2NTY5Mzg1MDB9.5OKOv21pSI9oWbin9uFqu5ljR7QATnYzGYZIS0ut9Dc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"account1\",\r\n  \"description\": \"account1\",\r\n  \"type\": \"CASH\",\r\n  \"currency\": \"1fa18cec-6ed0-42cb-a662-38e933b10761\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/account",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"account"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get account",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudDEiLCJyb2xlIjoiVVNFUiIsImVtYWlsIjoia2lyaWthbnRAeWFuZGV4LnJ1IiwiaWF0IjoxNjU2MzMzNzAwLCJleHAiOjE2NTY5Mzg1MDB9.5OKOv21pSI9oWbin9uFqu5ljR7QATnYzGYZIS0ut9Dc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"main\",\r\n  \"description\": \"the main payment account\",\r\n  \"type\": \"CASH\",\r\n  \"currency\": \"a1adb834-12fd-4160-920d-d302cd26555a\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/account/a4ed99e6-f77d-468b-a8ad-aaf46478d2b4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"account",
+						"a4ed99e6-f77d-468b-a8ad-aaf46478d2b4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get accounts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudDEiLCJyb2xlIjoiVVNFUiIsImVtYWlsIjoia2lyaWthbnRAeWFuZGV4LnJ1IiwiaWF0IjoxNjU2MzMzNzAwLCJleHAiOjE2NTY5Mzg1MDB9.5OKOv21pSI9oWbin9uFqu5ljR7QATnYzGYZIS0ut9Dc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/account?page=0&size=5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"account"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update account",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudDEiLCJyb2xlIjoiVVNFUiIsImVtYWlsIjoia2lyaWthbnRAeWFuZGV4LnJ1IiwiaWF0IjoxNjU2MzMzOTAwLCJleHAiOjE2NTY5Mzg3MDB9.oaRe8Rl-JhrTFAwgn6rnDLiFoNy4qhXT2KKzycSTzvk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"title\": \"main\",\r\n  \"description\": \"the main payment account\",\r\n  \"type\": \"CASH\",\r\n  \"currency\": \"1fa18cec-6ed0-42cb-a662-38e933b10761\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/account/a4ed99e6-f77d-468b-a8ad-aaf46478d2b4/dt_update/1656344507749",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"account",
+						"a4ed99e6-f77d-468b-a8ad-aaf46478d2b4",
+						"dt_update",
+						"1656344507749"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get account operations",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudDEiLCJyb2xlIjoiVVNFUiIsImVtYWlsIjoia2lyaWthbnRAeWFuZGV4LnJ1IiwiaWF0IjoxNjU2MzMzOTAwLCJleHAiOjE2NTY5Mzg3MDB9.oaRe8Rl-JhrTFAwgn6rnDLiFoNy4qhXT2KKzycSTzvk",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8090/account/a4ed99e6-f77d-468b-a8ad-aaf46478d2b4/operation/?page=0&size=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"account",
+						"a4ed99e6-f77d-468b-a8ad-aaf46478d2b4",
+						"operation",
+						""
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add operation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudDEiLCJyb2xlIjoiVVNFUiIsImVtYWlsIjoia2lyaWthbnRAeWFuZGV4LnJ1IiwiaWF0IjoxNjU2MzMzOTAwLCJleHAiOjE2NTY5Mzg3MDB9.oaRe8Rl-JhrTFAwgn6rnDLiFoNy4qhXT2KKzycSTzvk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"date\": 1656378200040,\r\n  \"description\": \"operation\",\r\n  \"category\": \"9d3fe263-0acf-40e9-aeb1-75b4fb8a9150\",\r\n  \"value\": -1,\r\n  \"currency\": \"1fa18cec-6ed0-42cb-a662-38e933b10761\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/account/a4ed99e6-f77d-468b-a8ad-aaf46478d2b4/operation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"account",
+						"a4ed99e6-f77d-468b-a8ad-aaf46478d2b4",
+						"operation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update operation",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudDEiLCJyb2xlIjoiVVNFUiIsImVtYWlsIjoia2lyaWthbnRAeWFuZGV4LnJ1IiwiaWF0IjoxNjU2MzMzOTAwLCJleHAiOjE2NTY5Mzg3MDB9.oaRe8Rl-JhrTFAwgn6rnDLiFoNy4qhXT2KKzycSTzvk",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"date\": 1656345240674,\r\n  \"description\": \"string\",\r\n  \"category\": \"1495cd3c-9288-4bc4-820a-c5163070cc67\",\r\n  \"value\": 2,\r\n  \"currency\": \"1fa18cec-6ed0-42cb-a662-38e933b10761\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/account/a4ed99e6-f77d-468b-a8ad-aaf46478d2b4/operation/cb355895-116e-4995-864a-b29953a66789/dt_update/1656345240674",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"account",
+						"a4ed99e6-f77d-468b-a8ad-aaf46478d2b4",
+						"operation",
+						"cb355895-116e-4995-864a-b29953a66789",
+						"dt_update",
+						"1656345240674"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete opearation",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudDEiLCJyb2xlIjoiVVNFUiIsImVtYWlsIjoia2lyaWthbnRAeWFuZGV4LnJ1IiwiaWF0IjoxNjU2MzM1MjQ2LCJleHAiOjE2NTY5NDAwNDZ9.f0bczwblgTqJNlJcuPZJ6J1h8gM9R8APpFpYbb2gy90",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8090/account/a4ed99e6-f77d-468b-a8ad-aaf46478d2b4/operation/cb355895-116e-4995-864a-b29953a66789/dt_update/1656345791360",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"account",
+						"a4ed99e6-f77d-468b-a8ad-aaf46478d2b4",
+						"operation",
+						"cb355895-116e-4995-864a-b29953a66789",
+						"dt_update",
+						"1656345791360"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

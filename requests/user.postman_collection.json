@@ -1,0 +1,104 @@
+{
+	"info": {
+		"_postman_id": "46653c4a-5f56-4be4-a9db-85cc797977b6",
+		"name": "user",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19288372"
+	},
+	"item": [
+		{
+			"name": "get users",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudDEiLCJyb2xlIjoiVVNFUiIsImVtYWlsIjoia2lyaWthbnRAeWFuZGV4LnJ1IiwiaWF0IjoxNjU2MzMyMDY3LCJleHAiOjE2NTY5MzY4Njd9.5zPuPhDNZn_ckskLy1nImOqC2i2Rp8DXrOYqEcDxyjE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8120/user/all?page=0&size=2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8120",
+					"path": [
+						"user",
+						"all"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"kirikant1\",\r\n    \"password\": \"kirikant1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8120/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8120",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"login\": \"kirikant1\",\r\n    \"password\": \"kirikant1\",\r\n    \"email\":\"kirikant@yandex.ru\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8120/user/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8120",
+					"path": [
+						"user",
+						"register"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,134 @@
+{
+	"info": {
+		"_postman_id": "1e0ec0bc-0a9e-408a-a5cb-1acf7a825eed",
+		"name": "reports",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19288372"
+	},
+	"item": [
+		{
+			"name": "add report",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudDEiLCJyb2xlIjoiVVNFUiIsImVtYWlsIjoia2lyaWthbnRAeWFuZGV4LnJ1IiwiaWF0IjoxNjU2MzM2MDA1LCJleHAiOjE2NTY5NDA4MDV9.KzVn0ruVNEBdS3E-AsAyd-smwRLPkjtMb33N_8X0Gjw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"accounts\":[\r\n\"a4ed99e6-f77d-468b-a8ad-aaf46478d2b4\"\r\n],\r\n\"categories\":[\r\n\"1495cd3c-9288-4bc4-820a-c5163070cc67\",\r\n\"9d3fe263-0acf-40e9-aeb1-75b4fb8a9150\"\r\n],\r\n\"from\":0 ,\r\n\"to\":1993300000000  \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8300/report/BY_DATE",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8300",
+					"path": [
+						"report",
+						"BY_DATE"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get scheduled reports",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudDEiLCJyb2xlIjoiVVNFUiIsImVtYWlsIjoia2lyaWthbnRAeWFuZGV4LnJ1IiwiaWF0IjoxNjU2MzM2MDA1LCJleHAiOjE2NTY5NDA4MDV9.KzVn0ruVNEBdS3E-AsAyd-smwRLPkjtMb33N_8X0Gjw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8300/report?page=0&size=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8300",
+					"path": [
+						"report"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check to download",
+			"request": {
+				"method": "HEAD",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudDEiLCJyb2xlIjoiVVNFUiIsImVtYWlsIjoia2lyaWthbnRAeWFuZGV4LnJ1IiwiaWF0IjoxNjU2MzM2MDA1LCJleHAiOjE2NTY5NDA4MDV9.KzVn0ruVNEBdS3E-AsAyd-smwRLPkjtMb33N_8X0Gjw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8300/report/04dd5730-44bd-4da5-ba71-94139146e4ab/export",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8300",
+					"path": [
+						"report",
+						"04dd5730-44bd-4da5-ba71-94139146e4ab",
+						"export"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "download",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudDEiLCJyb2xlIjoiVVNFUiIsImVtYWlsIjoia2lyaWthbnRAeWFuZGV4LnJ1IiwiaWF0IjoxNjU2MzM2MDA1LCJleHAiOjE2NTY5NDA4MDV9.KzVn0ruVNEBdS3E-AsAyd-smwRLPkjtMb33N_8X0Gjw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8300/report/04dd5730-44bd-4da5-ba71-94139146e4ab/export",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8300",
+					"path": [
+						"report",
+						"04dd5730-44bd-4da5-ba71-94139146e4ab",
+						"export"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "9f6f5447-aa6c-4905-b7bc-cbee97f454ed",
+		"name": "scheduled_operations",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19288372"
+	},
+	"item": [
+		{
+			"name": "get scheduled operations",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudDEiLCJyb2xlIjoiVVNFUiIsImVtYWlsIjoia2lyaWthbnRAeWFuZGV4LnJ1IiwiaWF0IjoxNjU2MzMzNzAwLCJleHAiOjE2NTY5Mzg1MDB9.5OKOv21pSI9oWbin9uFqu5ljR7QATnYzGYZIS0ut9Dc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/scheduler/operation/a4ed99e6-f77d-468b-a8ad-aaf46478d2b4?page=0&size=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scheduler",
+						"operation",
+						"a4ed99e6-f77d-468b-a8ad-aaf46478d2b4"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add scheduled operation",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudDEiLCJyb2xlIjoiVVNFUiIsImVtYWlsIjoia2lyaWthbnRAeWFuZGV4LnJ1IiwiaWF0IjoxNjU2MzMzNzAwLCJleHAiOjE2NTY5Mzg1MDB9.5OKOv21pSI9oWbin9uFqu5ljR7QATnYzGYZIS0ut9Dc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\"schedule_dto\": {\r\n    \"start_time\":1656337920000,\r\n    \"stop_time\": 1656337980000,\r\n    \"interval\": 30,\r\n    \"time_unit\": \"SECOND\"\r\n  },\r\n  \"operation_dto\": {\r\n    \"account\": \"a4ed99e6-f77d-468b-a8ad-aaf46478d2b4\",\r\n    \"description\": \"string\",\r\n    \"value\": 3,\r\n    \"currency\": \"1495cd3c-9288-4bc4-820a-c5163070cc67\",\r\n    \"category\": \"1fa18cec-6ed0-42cb-a662-38e933b10761\"\r\n  }}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/scheduler/operation",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scheduler",
+						"operation"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update scheduled operation",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"scheduleDto\": {\r\n    \"start_time\":1652366880000,\r\n    \"stop_time\": 1652367120000,\r\n    \"interval\": 32,\r\n    \"time_unit\": \"SECOND\"\r\n  },\r\n  \"operationDto\": {\r\n    \"account\": \"4f7fc4fb-d8de-41ec-8a28-4c188ba5e825\",\r\n    \"description\": \"changed\",\r\n    \"value\": 1,\r\n    \"currency\": \"7d7adb60-726e-4b3b-a58d-8ba79fe7b89b\",\r\n    \"category\": \"50c92252-3c87-4193-9c15-959c4a321ab7\"\r\n  }}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/scheduler/operation/ec3d2b6a-0e51-4ae4-bf6e-97617a27a724/dt_update/1652377352239",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"scheduler",
+						"operation",
+						"ec3d2b6a-0e51-4ae4-bf6e-97617a27a724",
+						"dt_update",
+						"1652377352239"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

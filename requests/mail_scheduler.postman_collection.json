@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "b5fccc16-6f10-4f13-86a4-ab795ee581c8",
+		"name": "mail_scheduler",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19288372"
+	},
+	"item": [
+		{
+			"name": "add scheduled report",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudDEiLCJyb2xlIjoiVVNFUiIsImVtYWlsIjoia2lyaWthbnRAeWFuZGV4LnJ1IiwiaWF0IjoxNjU2MzM2MDA1LCJleHAiOjE2NTY5NDA4MDV9.KzVn0ruVNEBdS3E-AsAyd-smwRLPkjtMb33N_8X0Gjw",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"report_param_dto\":\r\n{\"accounts\":[\r\n\"a4ed99e6-f77d-468b-a8ad-aaf46478d2b4\"\r\n],\r\n\"categories\":[\r\n\"1495cd3c-9288-4bc4-820a-c5163070cc67\",\r\n\"9d3fe263-0acf-40e9-aeb1-75b4fb8a9150\"\r\n],\r\n\"from\":0 ,\r\n\"to\":1993300000000  \r\n},\r\n\"schedule_dto\": {\r\n    \"start_time\":1656338340000,\r\n    \"stop_time\": 1656338400000,\r\n    \"interval\": 30,\r\n    \"time_unit\": \"SECOND\"\r\n  },\r\n  \"report_type\":\"BY_DATE\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8500/mail-scheduler/message-report",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8500",
+					"path": [
+						"mail-scheduler",
+						"message-report"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get scheduled reports",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJraXJpa2FudDEiLCJyb2xlIjoiVVNFUiIsImVtYWlsIjoia2lyaWthbnRAeWFuZGV4LnJ1IiwiaWF0IjoxNjU2MzM2MDA1LCJleHAiOjE2NTY5NDA4MDV9.KzVn0ruVNEBdS3E-AsAyd-smwRLPkjtMb33N_8X0Gjw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8500/mail-scheduler/message-report?page=0&size=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8500",
+					"path": [
+						"mail-scheduler",
+						"message-report"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
